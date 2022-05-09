@@ -12,11 +12,15 @@ cd /tmp/$TempFolder
 #CFG File
 curl -LJO https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/macos/SensorMacOSInstaller-RIVALRY_Detect_3.60.2.cfg
 # Capture name of Download File and report it
-DownloadFile="$(ls)"
-echo "Downloaded $DownloadFile to /tmp/$TempFolder"
+DownloadedCFGFile="$(ls)"
+echo "Downloaded $DownloadedCFGFile to /tmp/$TempFolder"
+
 #INSTALL File
 curl -LJO https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/macos/SensorMacOSInstaller-RIVALRY_Detect_3.60.2
 # Capture name of Download File and report it
-DownloadFile="$(ls)"
-echo "Downloaded $DownloadFile to /tmp/$TempFolder"
+DownloadedINSTALLFile="$(ls)"
+echo "Downloaded $DownloadedINSTALLFile to /tmp/$TempFolder"
 
+
+chmod +x $DownloadedINSTALLFile
+#sudo ./$DownloadedINSTALLFile -c $DownloadedCFGFile.cfg -k 1E500BF92DFCF6F7F1AB -d false -l install.log
