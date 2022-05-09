@@ -23,4 +23,4 @@ echo "Downloaded $DownloadedINSTALLFile to /tmp/$TempFolder"
 
 
 chmod +x $DownloadedINSTALLFile
-./$DownloadedINSTALLFile -c $DownloadedCFGFile -k 1E500BF92DFCF6F7F1AB -d false -l install.log
+./$DownloadedINSTALLFile -c $DownloadedCFGFile -k 1E500BF92DFCF6F7F1AB -u force -l uninstall.log
