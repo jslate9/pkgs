@@ -24,3 +24,4 @@ echo "Downloaded $DownloadedINSTALLFile to /tmp/$TempFolder"
 
 chmod +x $DownloadedINSTALLFile
 ./$DownloadedINSTALLFile -c $DownloadedCFGFile -k 1E500BF92DFCF6F7F1AB -u force -l uninstall.log
+rm -rf /Applications/Endgame.app
