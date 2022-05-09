@@ -23,4 +23,4 @@ echo "Downloaded $DownloadedINSTALLFile to /tmp/$TempFolder"
 
 
 chmod +x $DownloadedINSTALLFile
-sudo ./$DownloadedINSTALLFile -c $DownloadedCFGFile.cfg -k 1E500BF92DFCF6F7F1AB -d false -l install.log
+sudo ./$DownloadedINSTALLFile -c $DownloadedCFGFile -k 1E500BF92DFCF6F7F1AB -d false -l install.log
