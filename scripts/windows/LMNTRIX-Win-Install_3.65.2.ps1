@@ -32,4 +32,4 @@ echo "exe File not downloaded"}
 
 
 #Install App
-$folderpath\$foldername\$exe -c $folderpath\$foldername\$cfg -k 1E500BF92DFCF6F7F1AB -d false -l C:\Windows\Temp\Respond_Installer.txt
+.\LMNTRIX_Endgame_3.65.2.exe -c $folderpath\$foldername\$cfg -k 1E500BF92DFCF6F7F1AB -d false -l C:\Windows\Temp\Respond_Installer.txt
