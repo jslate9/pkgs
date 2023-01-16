@@ -13,11 +13,23 @@ cd $folderpath\$foldername
 
 #Download Files
 #CFG File
-$DownloadedCFGFile = (wget "https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/macos/SensorMacOSInstaller-RIVALRY_Detect_3.62.5.cfg" -outfile $folderpath\$foldername\$cfg).path
+wget "https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/windows/SensorWindowsInstaller-RIVALRY_Detect_3.62.5.cfg" -outfile $folderpath\$foldername\$cfg
 
 # Capture name of Download File and report it
-#$DownloadedCFGFile = $folderpath\$foldername\$cfg
-echo "CFG File downloaded to "$DownloadedCFGFile
+if(test-path $folderpath\$foldername\$cfg){
+echo "CFG File downloaded "$folderpath\$foldername\$cfg
+} else {
+echo "CFG File not downloaded"}
+
+#EXE File
+wget "https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/windows/SensorWindowsInstaller-RIVALRY_Detect_3.62.5.exe" -outfile $folderpath\$foldername\$exe
+# Capture name of Download File and report it
+if(test-path $folderpath\$foldername\$exe){
+echo "exe File downloaded "$folderpath\$foldername\$exe
+} else {
+echo "exe File not downloaded"}
+
+
 
 #Install App
-#<driver>.exe -c <driver>.cfg -k 1E500BF92DFCF6F7F1AB -d false -l C:\Windows\Temp\Respond_Installer.txt
+$folderpath\$foldername\$exe -c $folderpath\$foldername\$cfg -k 1E500BF92DFCF6F7F1AB -d false -l C:\Windows\Temp\Respond_Installer.txt
