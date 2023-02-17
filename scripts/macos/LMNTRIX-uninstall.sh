@@ -32,7 +32,7 @@ if [[ $endgameStatus ]]; then
         echo "Uninstaller ran successfully"
         Sleep 30
         endgameStatus=$(pgrep esensor)
-        if [[! $endgameStatus ]]; then
+        if [[ ! $endgameStatus ]]; then
             echo "endgame successfully uninstalled"
             exit 0
         else
