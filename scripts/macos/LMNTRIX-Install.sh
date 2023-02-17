@@ -25,6 +25,7 @@ else
     # Capture name of Download File and report it
     DownloadedINSTALLFile="$(ls)"
     echo "Downloaded $DownloadedINSTALLFile to /tmp/$TempFolder"
+    echo "Changing permissions to install file"
     chmod +x $DownloadedINSTALLFile
 
     echo "stating install"
