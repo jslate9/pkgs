@@ -8,6 +8,7 @@ TempFolder="Download-$DATE"
 
 if [[ $endgameStatus ]]; then
 echo "endgame is running/installed, not downloading or installing"
+exit 0
 else
     mkdir /tmp/$TempFolder
     # Navigate to Temp Folder
@@ -34,8 +35,10 @@ else
         endgameStatus=$(pgrep esensor)
         if [[ $endgameStatus ]]; then
             echo "endgame started successfully after install"
+            exit 0
         else
             echo "endgame failed to start after install"
+            exit 1
         fi
     fi
 fi
