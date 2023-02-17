@@ -16,12 +16,12 @@ else
 
     #Download Required Files
     #CFG File
-    curl -LJO https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/macos/SensorMacOSInstaller-RIVALRY_Detect_3.62.5.cfg
+    curl -LJOs https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/macos/SensorMacOSInstaller-RIVALRY_Detect_3.62.5.cfg
     # Capture name of Download File and report it
     DownloadedCFGFile="$(ls)"
     echo "Downloaded $DownloadedCFGFile to /tmp/$TempFolder"
     #INSTALL File
-    curl -LJO https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/macos/SensorMacOSInstaller-RIVALRY_Detect_3.62.5
+    curl -LJOs https://github.com/jslate9/pkgs/raw/main/installers/LMNTRIX/macos/SensorMacOSInstaller-RIVALRY_Detect_3.62.5
     # Capture name of Download File and report it
     DownloadedINSTALLFile="$(ls)"
     echo "Downloaded $DownloadedINSTALLFile to /tmp/$TempFolder"
