@@ -47,5 +47,5 @@ if [[ $endgameStatus ]]; then
 
 else
     echo "Endgame is not installed"
-    exit 0
+    exit 1
 fi
